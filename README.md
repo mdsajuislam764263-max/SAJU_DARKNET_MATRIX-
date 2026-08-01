@@ -1,6 +1,13 @@
-# ⚡ SAJU // CYBER_CORE_v100 ⚡
+<div align="center">
 
-> A dynamic, futuristic personal web portal featuring **Cyberpunk aesthetics**, **RGB lighting animations**, and an interactive **Terminal UI**.
+  <!-- 🔥 STYLED PROFILE PICTURE AT THE TOP 🔥 -->
+  <img src="my-pic.jpg" alt="Saju Islam" width="160" height="160" style="border-radius: 50%; border: 4px solid #00ffcc; box-shadow: 0 0 25px #00ffcc;">
+
+  # ⚡ SAJU // CYBER_CORE_v100 ⚡
+
+  > A dynamic, futuristic personal web portal featuring **Cyberpunk aesthetics**, **RGB lighting animations**, and an interactive **Terminal UI**.
+
+</div>
 
 ---
 
