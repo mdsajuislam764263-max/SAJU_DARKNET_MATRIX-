@@ -1,7 +1,7 @@
 <div align="center">
 
-  <!-- 🔥 STYLED PROFILE PICTURE AT THE TOP 🔥 -->
-  <img src="my-pic.jpg" alt="Saju Islam" width="160" height="160" style="border-radius: 50%; border: 4px solid #00ffcc; box-shadow: 0 0 25px #00ffcc;">
+  <!-- 🔥 STYLED PROFILE attachment AT THE TOP 🔥 -->
+  <attachment src="saju-dark.mp4" alt="Saju Islam" width="160" height="160" style="border-radius: 50%; border: 4px solid #00ffcc; box-shadow: 0 0 25px #00ffcc;">
 
   # ⚡ SAJU // CYBER_CORE_v100 ⚡
 
