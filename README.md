@@ -27,7 +27,7 @@
 
 ```text
 ├── index.html        # Main portal structure
-├── style.css         # RGB lighting, animations & layouts
-├── script.js        # Terminal commands, dynamic FX & audio logic
-├── assets/           # Audio files and personal images
-└── README.md         # Documentation
+├── my-pic.jpg        # Personal profile picture
+├── song.mp3          # Background music
+├── README.md         # Documentation
+└── ...               # System files
