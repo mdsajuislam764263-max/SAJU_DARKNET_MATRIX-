@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>☠️ [APEX ABYSS MAINFRAME v36.0] // ☠️ SAJU ISLAM ☠️</title>
+    <title>☠️ [AUDIO REACTIVE DEMONIC] //🔥❤️‍🔥 SAJU ISLAM DARKNET v100.0 //🔥❤️‍🔥☠️</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@900&family=Creepster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@900&family=Creepster&family=Nosifer&display=swap');
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Share Tech Mono', monospace; }
         
@@ -14,110 +14,181 @@
             background-color: #000000; color: #ff0033; min-height: 100vh;
             display: flex; justify-content: center; align-items: center;
             padding: 15px 10px; overflow-x: hidden; position: relative;
+            transition: background-color 0.05s ease;
         }
 
-        /* Loader */
+        /* 1. TERRIFYING SITE OPENING LOADER ANIMATION */
         #intro-loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.95); z-index: 9999;
+            background: #000000; z-index: 99999;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            transition: opacity 0.5s ease, visibility 0.5s ease;
+            overflow: hidden; transition: opacity 0.8s ease-out;
         }
-        .cyber-loader-box {
-            text-align: center; padding: 45px; border: 6px solid #d500f9; border-radius: 25px;
-            background: rgba(8, 0, 15, 0.99); box-shadow: 0 0 150px rgba(213, 0, 249, 0.8);
-            animation: apexPulse 0.4s infinite alternate;
+
+        .blood-flash-bg { animation: violentBloodFlash 0.08s infinite alternate !important; }
+
+        @keyframes violentBloodFlash {
+            0% { background-color: #000000; }
+            50% { background-color: #440000; }
+            100% { background-color: #ff0000; }
         }
-        @keyframes apexPulse { 0% { transform: scale(0.95); } 100% { transform: scale(1.05); } }
-        .matrix-rain-loader { color: #00ffcc; font-size: 15px; letter-spacing: 6px; margin-bottom: 20px; text-shadow: 0 0 30px #00ffcc; font-weight: bold; }
-        .loader-bar-frame { width: 340px; height: 14px; border: 2px solid #00ffcc; border-radius: 8px; padding: 2px; }
+
+        .site-opening-title {
+            font-family: 'Nosifer', cursive; font-size: 22px; color: #ff0000;
+            text-shadow: 0 0 20px #ff0000, 0 0 40px #8b0000;
+            margin-bottom: 25px; letter-spacing: 3px; text-align: center;
+            animation: terrorTextGlitch 0.1s infinite alternate;
+        }
+
+        @keyframes terrorTextGlitch {
+            0% { transform: translate(3px, 1px) skewX(5deg); }
+            50% { transform: translate(-3px, -2px) skewX(-5deg); filter: invert(1); }
+            100% { transform: translate(1px, -3px); }
+        }
+
+        .cyber-spinner {
+            width: 80px; height: 80px;
+            border: 6px solid rgba(255, 0, 0, 0.2);
+            border-top: 6px solid #ff0000; border-right: 6px solid #8b0000;
+            border-radius: 50%; animation: spin 0.6s linear infinite;
+            box-shadow: 0 0 40px #ff0000; margin-bottom: 25px;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .loading-stage { text-align: center; width: 90%; max-width: 450px; display: flex; flex-direction: column; align-items: center; }
+        .terminal-log { font-size: 13px; color: #00ffcc; text-shadow: 0 0 8px #00ffcc; margin-bottom: 15px; height: 20px; font-weight: bold; letter-spacing: 2px; }
+        .loader-bar-frame { 
+            width: 100%; height: 22px; border: 3px solid #ff0000; 
+            border-radius: 12px; padding: 2px; box-shadow: 0 0 30px #ff0000;
+            background: #050000; position: relative; overflow: hidden;
+        }
         .loader-bar-fill {
-            height: 100%; width: 0%; background: linear-gradient(90deg, #d500f9, #00ffcc, #ff0033);
-            animation: fillProgress 1.5s forwards;
-        }
-        @keyframes fillProgress { 0% { width: 0%; } 100% { width: 100%; } }
-
-        /* Canvas */
-        #matrix-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.6; pointer-events: none; }
-
-        /* Main Container (Purple/Magenta Glow like screenshot) */
-        .main-container {
-            width: 100%; max-width: 500px; background: rgba(5, 0, 10, 0.95);
-            border: 3px solid #d500f9; border-radius: 25px; padding: 24px;
-            box-shadow: 0 0 40px rgba(213, 0, 249, 0.6), inset 0 0 20px rgba(213, 0, 249, 0.3); 
-            position: relative; z-index: 2;
+            height: 100%; width: 0%; 
+            background: linear-gradient(90deg, #8b0000, #ff0000, #ffffff);
+            box-shadow: 0 0 20px #ff0000; transition: width 0.1s linear;
         }
 
-        /* Password Overlay */
+        .scary-jumpscare-box { display: none; text-align: center; animation: zoomScare 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        .scary-emoji {
+            font-size: 160px; text-shadow: 0 0 60px #ff0000, 0 0 120px #8b0000;
+            animation: skullGlitch 0.05s infinite alternate; margin-bottom: 10px; display: inline-block;
+        }
+        @keyframes zoomScare { 0% { transform: scale(0.1) rotate(-45deg); opacity: 0; } 100% { transform: scale(1.1) rotate(0deg); opacity: 1; } }
+        @keyframes skullGlitch { 0% { transform: translate(5px, 5px); } 100% { transform: translate(-5px, -5px) filter: invert(0.8); } }
+        
+        .scary-warning-text {
+            font-family: 'Nosifer', cursive; color: #ffffff; font-size: 28px;
+            letter-spacing: 6px; text-shadow: 0 0 30px #ff0000, 0 0 50px #ff0000; margin-bottom: 15px;
+            animation: textShake 0.05s infinite;
+        }
+        @keyframes textShake { 0% { transform: translate(3px, 3px); } 50% { transform: translate(-4px, -2px); } 100% { transform: translate(2px, -4px); } }
+
+        /* MATRIX BACKGROUND */
+        #matrix-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.8; pointer-events: none; }
+
+        /* 2. TERRIFYING DEMONIC PASSWORD OVERLAY */
         #auth-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.96); backdrop-filter: blur(12px);
             z-index: 998; display: flex; justify-content: center; align-items: center; padding: 20px;
         }
         .auth-box {
-            width: 100%; max-width: 410px; background: #040001;
-            border: 5px solid #d500f9; border-radius: 22px; padding: 32px; text-align: center;
-            box-shadow: 0 0 80px rgba(213, 0, 249, 0.6);
+            width: 100%; max-width: 440px; background: #030000;
+            border: 4px solid #ff0000; border-radius: 20px; padding: 35px 25px; text-align: center;
+            box-shadow: 0 0 100px #ff0000, inset 0 0 40px #8b0000;
+            animation: boxBloodPulse 1.5s infinite alternate;
         }
-        .auth-box h3 { color: #d500f9; font-size: 22px; font-family: 'Creepster', cursive; margin-bottom: 15px; letter-spacing: 3px; text-shadow: 0 0 20px #d500f9;}
-        .auth-input { width: 100%; background: #000; border: 2px solid #00ffcc; color: #00ffcc; padding: 15px; border-radius: 12px; font-size: 19px; text-align: center; margin-bottom: 15px; letter-spacing: 10px; }
-        .auth-btn { width: 100%; background: #d500f9; color: #fff; border: none; padding: 15px; font-weight: bold; border-radius: 12px; cursor: pointer; letter-spacing: 2px; }
+        @keyframes boxBloodPulse {
+            0% { box-shadow: 0 0 50px #ff0000, inset 0 0 20px #8b0000; border-color: #ff0000; }
+            100% { box-shadow: 0 0 120px #ff0000, inset 0 0 60px #ff0000; border-color: #fff; }
+        }
+        .auth-box h3 { color: #ff0000; font-size: 28px; font-family: 'Nosifer', cursive; margin-bottom: 10px; letter-spacing: 3px; text-shadow: 0 0 30px #ff0000;}
+        .auth-box p { color: #ff3333; font-size: 12px; font-weight: bold; margin-bottom: 20px; letter-spacing: 2px; }
+        .auth-input { 
+            width: 100%; background: #000; border: 3px solid #ff0000; color: #ff0000; 
+            padding: 16px; border-radius: 12px; font-size: 24px; text-align: center; 
+            margin-bottom: 20px; letter-spacing: 10px; font-weight: bold; outline: none;
+            box-shadow: inset 0 0 15px #ff0000;
+        }
+        .auth-input:focus { border-color: #fff; box-shadow: 0 0 30px #ff0000; }
+        .auth-btn { 
+            width: 100%; background: linear-gradient(180deg, #ff0000, #8b0000); color: #fff; 
+            border: none; padding: 16px; font-weight: 900; font-size: 16px; border-radius: 12px; 
+            cursor: pointer; letter-spacing: 3px; box-shadow: 0 0 40px #ff0000; transition: 0.2s; 
+            font-family: 'Orbitron', sans-serif;
+        }
+        .auth-btn:hover { background: #fff; color: #ff0000; transform: scale(1.03); }
 
-        /* Header */
+        .shake-error { animation: hardShake 0.2s 3; border-color: #fff !important; }
+        @keyframes hardShake { 0% { transform: translateX(0); } 25% { transform: translateX(-15px); } 75% { transform: translateX(15px); } 100% { transform: translateX(0); } }
+
+        /* MAIN DANCING CONTAINER */
+        .main-container {
+            width: 100%; max-width: 580px; background: rgba(5, 0, 2, 0.97);
+            border: 3px solid #ff0000; border-radius: 20px; padding: 24px;
+            box-shadow: 0 0 80px rgba(255, 0, 0, 0.9), inset 0 0 40px rgba(255, 0, 0, 0.5); 
+            position: relative; z-index: 2; margin: 20px 0;
+            transition: transform 0.05s ease, box-shadow 0.05s ease;
+            will-change: transform, box-shadow;
+        }
+
         .terminal-header {
             display: flex; justify-content: space-between; align-items: center;
-            font-size: 10px; color: #ff3300; border-bottom: 1px dashed #ff3300;
-            padding-bottom: 8px; margin-bottom: 20px; letter-spacing: 1px;
+            font-size: 11px; color: #ff0000; border-bottom: 1px dashed #ff0000;
+            padding-bottom: 10px; margin-bottom: 20px; letter-spacing: 1px; font-weight: bold;
         }
-        .live-dot { height: 10px; width: 10px; background-color: #ff3300; border-radius: 50%; display: inline-block; box-shadow: 0 0 15px #ff3300; animation: blink 1s infinite alternate; }
-        @keyframes blink { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+        .live-dot { height: 12px; width: 12px; background-color: #ff0000; border-radius: 50%; display: inline-block; box-shadow: 0 0 20px #ff0000; animation: blink 0.4s infinite alternate; }
+        @keyframes blink { 0% { opacity: 0.1; } 100% { opacity: 1; } }
 
         /* Profile Area */
         .profile-section { text-align: center; margin-bottom: 20px; }
         .portal-logo { 
-            width: 125px; height: 125px; border-radius: 50%; 
-            border: 3px solid #ffcc00; margin: 0 auto 10px; display: block; object-fit: cover;
-            box-shadow: 0 0 30px rgba(255, 204, 0, 0.7), inset 0 0 15px rgba(255, 204, 0, 0.5);
+            width: 130px; height: 130px; border-radius: 50%; 
+            border: 4px solid #ff0000; margin: 0 auto 12px; display: block; object-fit: cover;
+            box-shadow: 0 0 50px #ff0000, inset 0 0 20px #ff0000;
+            transition: transform 0.05s ease, box-shadow 0.05s ease;
+            will-change: transform, box-shadow;
         }
         .portal-title { 
-            text-align: center; font-family: 'Orbitron', sans-serif; font-size: 28px; font-weight: 900; 
-            background: linear-gradient(90deg, #00d2ff 0%, #ff512f 100%);
-            -webkit-background-clip: text; color: transparent; letter-spacing: 3px; margin-bottom: 5px;
+            text-align: center; font-family: 'Nosifer', cursive; font-size: 26px; font-weight: 900; 
+            color: #ff0000; letter-spacing: 3px; margin-bottom: 8px; text-shadow: 0 0 25px #ff0000;
         }
-        .portal-subtitle { font-size: 10px; color: #ff3300; letter-spacing: 3px; text-shadow: 0 0 10px #ff3300; font-weight: bold; }
+        .portal-subtitle { font-size: 11px; color: #ff3300; letter-spacing: 4px; text-shadow: 0 0 10px #ff0000; font-weight: bold; font-family: 'Creepster', cursive; }
 
-        /* Telegram Card (Blue Theme) */
+        /* Telegram Card */
         .tg-channel-card {
-            background: rgba(2, 10, 30, 0.8); border: 1px solid #0055ff; border-radius: 12px; 
-            padding: 15px; margin-bottom: 15px; text-align: center; box-shadow: 0 0 25px rgba(0, 85, 255, 0.4);
+            background: rgba(15, 0, 0, 0.9); border: 2px solid #ff0000; border-radius: 12px; 
+            padding: 15px; margin-bottom: 15px; text-align: center; box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
         }
-        .tg-title { font-size: 11px; color: #00ccff; margin-bottom: 10px; font-weight: bold; }
+        .tg-title { font-size: 12px; color: #ff6666; margin-bottom: 10px; font-weight: bold; }
         .tg-link-btn {
-            background: #0066ff; color: #fff; padding: 10px 20px; border-radius: 8px;
-            font-size: 11px; font-weight: bold; text-decoration: none; display: inline-block;
-            box-shadow: 0 0 20px #0066ff; transition: 0.3s;
+            background: #ff0000; color: #000; padding: 10px 20px; border-radius: 8px;
+            font-size: 12px; font-weight: 900; text-decoration: none; display: inline-block;
+            box-shadow: 0 0 25px #ff0000; transition: 0.3s;
         }
+        .tg-link-btn:hover { background: #fff; transform: scale(1.05); }
 
-        /* User Card (Red Avatar, White Text, Green Subtitle) */
+        /* User Card */
         .user-card {
-            background: rgba(10, 0, 0, 0.8); border: 1px solid #330011; border-radius: 12px;
+            background: rgba(20, 0, 0, 0.9); border: 1px solid #ff0000; border-radius: 12px;
             padding: 12px 16px; display: flex; align-items: center; gap: 12px;
-            margin-bottom: 15px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            margin-bottom: 15px; box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
         }
         .user-avatar {
-            width: 40px; height: 40px; background: #ff0000; color: #fff; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px;
-            box-shadow: 0 0 15px #ff0000;
+            width: 42px; height: 42px; background: #ff0000; color: #000; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 20px;
+            box-shadow: 0 0 20px #ff0000;
         }
-        .user-details h4 { font-size: 13px; color: #ffffff; }
-        .user-details p { font-size: 10px; color: #00ff66; text-shadow: 0 0 5px #00ff66; margin-top: 3px; }
+        .user-details h4 { font-size: 14px; color: #ffffff; text-shadow: 0 0 5px #fff; }
+        .user-details p { font-size: 11px; color: #ff3300; text-shadow: 0 0 5px #ff0000; margin-top: 3px; font-weight: bold; }
 
-        /* Contact Section (NEW) */
+        /* Contact Section */
         .contact-box {
-            background: rgba(0, 0, 0, 0.6); border: 1px dashed #d500f9; border-radius: 12px;
+            background: rgba(10, 0, 0, 0.8); border: 1px dashed #ff0000; border-radius: 12px;
             padding: 15px; margin-bottom: 20px; text-align: center;
         }
-        .contact-title { font-size: 12px; color: #d500f9; margin-bottom: 12px; font-weight: bold; letter-spacing: 1px; }
+        .contact-title { font-size: 13px; color: #ff0000; margin-bottom: 12px; font-weight: bold; letter-spacing: 2px; font-family: 'Creepster', cursive; }
         .contact-buttons { display: flex; gap: 10px; justify-content: center; }
         .contact-btn {
             flex: 1; padding: 10px; border-radius: 8px; font-size: 11px; font-weight: bold;
@@ -126,86 +197,138 @@
         }
         .wa-btn { background: #25D366; box-shadow: 0 0 15px rgba(37, 211, 102, 0.5); }
         .fb-btn { background: #1877F2; box-shadow: 0 0 15px rgba(24, 119, 242, 0.5); }
-        .wa-btn:hover { box-shadow: 0 0 25px #25D366; }
-        .fb-btn:hover { box-shadow: 0 0 25px #1877F2; }
+        .wa-btn:hover { box-shadow: 0 0 25px #25D366; transform: scale(1.05); }
+        .fb-btn:hover { box-shadow: 0 0 25px #1877F2; transform: scale(1.05); }
 
-        /* Section Headings (Bright Green) */
-        .section-heading { 
-            font-size: 12px; color: #00ff00; margin: 25px 0 15px 0; font-weight: bold; 
-            text-shadow: 0 0 10px #00ff00; letter-spacing: 1px;
+        /* SECTION HEADINGS */
+        .blood-heading {
+            font-size: 16px; color: #ff0000; margin: 30px 0 15px 0; font-weight: bold;
+            text-shadow: 0 0 20px #ff0000; letter-spacing: 2px;
+            border-bottom: 2px dashed #ff0000; padding-bottom: 8px;
+            text-align: center; font-family: 'Nosifer', cursive; background: rgba(30, 0, 0, 0.8);
+            border-radius: 8px; padding: 10px; transition: transform 0.05s ease, box-shadow 0.05s ease;
         }
 
-        /* Tools Grid (Green Neon Style) */
-        .tools-grid { display: flex; flex-direction: column; gap: 12px; }
+        /* GRID STYLES */
+        .scary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;}
+        .scary-btn {
+            background: #000; border: 2px solid #ff0000; color: #ff3333; padding: 12px 8px;
+            text-align: center; text-decoration: none; border-radius: 8px; font-size: 11px; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 1px; box-shadow: inset 0 0 15px #550000, 0 0 10px rgba(255,0,0,0.4);
+            transition: all 0.2s; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+        }
+        .scary-btn span { font-size: 9px; color: #00ffcc; text-transform: none; }
+        .scary-btn:hover {
+            background: #ff0000; color: #000; box-shadow: 0 0 30px #ff0000;
+            border-color: #fff; transform: scale(1.06); animation: terrorShake 0.1s infinite;
+        }
+        .scary-btn:hover span { color: #000; }
+        
+        @keyframes terrorShake { 
+            0% { transform: translate(2px, 2px) rotate(0deg); } 
+            50% { transform: translate(-3px, -2px) rotate(2deg); } 
+            100% { transform: translate(2px, -1px) rotate(-1deg); } 
+        }
+
+        /* Tools Grid */
+        .tools-grid { display: flex; flex-direction: column; gap: 10px; }
         .tool-box { 
-            background: rgba(0, 10, 5, 0.6); border: 1px solid #00ff66; border-radius: 10px; 
-            padding: 15px; box-shadow: 0 0 15px rgba(0, 255, 102, 0.2); 
+            background: rgba(15, 0, 0, 0.8); border: 1px solid #ff0000; border-radius: 10px; 
+            padding: 12px; box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); 
         }
-        .tool-title { font-size: 11px; color: #00ff66; font-weight: bold; margin-bottom: 10px; text-shadow: 0 0 5px #00ff66; }
+        .tool-title { font-size: 11px; color: #ff3333; font-weight: bold; margin-bottom: 8px; text-shadow: 0 0 5px #ff0000; }
         .tool-input { 
-            width: 100%; background: #050505; border: 1px solid #333; color: #fff; 
-            padding: 10px; border-radius: 6px; font-size: 11px; margin-bottom: 10px; outline: none;
+            width: 100%; background: #000; border: 1px solid #550000; color: #00ffcc; 
+            padding: 8px; border-radius: 6px; font-size: 11px; margin-bottom: 8px; outline: none;
         }
-        .tool-input:focus { border-color: #00ffcc; box-shadow: 0 0 10px #00ffcc; }
+        .tool-input:focus { border-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
         .tool-btn { 
-            background: #00ffcc; color: #000; border: none; padding: 10px; border-radius: 6px; 
-            font-size: 11px; font-weight: bold; cursor: pointer; width: 100%; box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+            background: #ff0000; color: #000; border: none; padding: 8px; border-radius: 6px; 
+            font-size: 11px; font-weight: 900; cursor: pointer; width: 100%; box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+            transition: 0.2s;
         }
+        .tool-btn:hover { background: #fff; color: #ff0000; }
         .tool-res { 
-            background: #000; border: 1px dashed #00ff66; padding: 10px; border-radius: 6px; 
-            font-size: 10px; margin-top: 10px; display: none; word-break: break-all; color: #00ff66;
+            background: #000; border: 1px dashed #ff0000; padding: 8px; border-radius: 6px; 
+            font-size: 10px; margin-top: 8px; display: none; word-break: break-all; color: #00ffcc;
         }
 
         /* File Cards */
         .hub-card { 
-            background: #050205; border: 1px solid #d500f9; border-radius: 12px; 
+            background: #050000; border: 1px solid #ff0000; border-radius: 12px; 
             padding: 12px 15px; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; 
-            box-shadow: 0 0 10px rgba(213, 0, 249, 0.3);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
         }
         .item-meta { display: flex; align-items: center; gap: 12px; }
-        .item-icon { font-size: 20px; color: #d500f9; }
+        .item-icon { font-size: 22px; color: #ff0000; text-shadow: 0 0 10px #ff0000; }
         .item-desc h5 { font-size: 12px; color: #fff; }
-        .item-desc p { font-size: 9px; color: #00ffcc; margin-top: 2px; }
+        .item-desc p { font-size: 9px; color: #ff3300; margin-top: 2px; }
         .action-btn { 
-            background: transparent; border: 1px solid #00ffcc; color: #00ffcc; 
+            background: transparent; border: 1px solid #ff0000; color: #ff0000; 
             padding: 6px 12px; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; 
-            box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); transition: 0.2s;
         }
-        .action-btn:hover { background: #00ffcc; color: #000; }
+        .action-btn:hover { background: #ff0000; color: #000; box-shadow: 0 0 20px #ff0000; }
 
+        /* Audio Indicator Badge */
+        .audio-status-badge {
+            position: fixed; bottom: 15px; right: 15px; z-index: 999;
+            background: #000; border: 2px solid #ff0000; color: #00ffcc;
+            padding: 8px 12px; border-radius: 20px; font-size: 10px; font-weight: bold;
+            box-shadow: 0 0 20px #ff0000; display: flex; align-items: center; gap: 8px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
+    <!-- AUDIO DANCE INDICATOR -->
+    <div class="audio-status-badge" onclick="toggleAudio()"><i class="fa-solid fa-music"></i> <span id="music-btn-text">MUSIC & LIGHTING: PLAYING</span></div>
+
+    <!-- TERRIFYING HORROR OPENING LOADER ANIMATION -->
     <div id="intro-loader">
-        <div class="cyber-loader-box">
-            <div class="matrix-rain-loader">☠️ APEX DEEP MAINFRAME ☠️</div>
-            <div class="loader-bar-frame"><div class="loader-bar-fill"></div></div>
+        <div id="stage-loading" class="loading-stage">
+            <div class="site-opening-title">⚡ SYSTEM OVERRIDE: SITE IS OPENING...</div>
+            <div class="cyber-spinner"></div>
+            <div id="terminal-log-text" class="terminal-log">BREACHING ROOT SECURITY...</div>
+            <div class="loader-bar-frame">
+                <div id="loading-bar-fill" class="loader-bar-fill"></div>
+            </div>
+        </div>
+
+        <div id="stage-jumpscare" class="scary-jumpscare-box">
+            <div class="scary-emoji">☠️👹🩸</div>
+            <div class="scary-warning-text">CRITICAL BREACH!</div>
+            <div style="color: #ff0000; font-weight: 900; letter-spacing: 3px;">WELCOME TO SAJU ISLAM'S DEMONIC MAINFRAME</div>
         </div>
     </div>
 
     <canvas id="matrix-canvas"></canvas>
-    <audio id="bg-music" src="song.mp3" preload="auto" loop></audio>
+    
+    <!-- BACKGROUND MUSIC WITH CROSSORIGIN FOR AUDIO VISUALIZER -->
+    <audio id="bg-music" src="song.mp3" crossorigin="anonymous" loop></audio>
 
+    <!-- TERRIFYING DEMONIC PASSWORD OVERLAY -->
     <div id="auth-overlay">
-        <div class="auth-box">
-            <h3>APEX LOCKDOWN ☠️</h3>
+        <div class="auth-box" id="auth-box-panel">
+            <h3>DEMONIC LOCK ☠️</h3>
+            <p>ENTER MASTER PASSCODE TO UNLOCK SYSTEM</p>
             <input type="password" id="pass-input" class="auth-input" placeholder="??????">
             <button class="auth-btn" onclick="verifyPassword()">UNLOCK MAINFRAME</button>
         </div>
     </div>
 
-    <div class="main-container">
+    <div class="main-container" id="dance-container">
         
         <!-- Header -->
         <div class="terminal-header">
-            <span><span class="live-dot"></span> ELITE DARKNET ROOT SYSTEM</span>
-            <span>APEX VAULT v36.0</span>
+            <span><span class="live-dot"></span> WARNING: RESTRICTED TERMINAL</span>
+            <span>SAJU VAULT v100.0</span>
         </div>
 
         <!-- Profile Section -->
         <div class="profile-section">
-            <img src="my-pic.jpg" alt="Logo" class="portal-logo" onerror="this.src='https://i.imgur.com/7w3OqQ0.png'">
+            <img src="my-pic.jpg" alt="Logo" class="portal-logo" id="dance-logo" onerror="this.src='https://i.imgur.com/7w3OqQ0.png'">
             <div class="portal-title">SAJU ISLAM</div>
             <div class="portal-subtitle">// SUPREME DARKNET ROOT MASTER //</div>
         </div>
@@ -225,7 +348,7 @@
             </div>
         </div>
 
-        <!-- NEW CONTACT & SUPPORT SECTION -->
+        <!-- Contact Section -->
         <div class="contact-box">
             <div class="contact-title"><i class="fa-solid fa-headset"></i> CONTACT FOR SUPPORT</div>
             <div class="contact-buttons">
@@ -238,54 +361,99 @@
             </div>
         </div>
 
+        <!-- 10 HIDDEN WEBSITES HUB -->
+        <div class="blood-heading">👁️ 10 HIDDEN WEBSITES HUB 👁️</div>
+        <div class="scary-grid">
+            <a href="https://archive.org" target="_blank" class="scary-btn">Wayback Machine<span>archive.org</span></a>
+            <a href="https://z-lib.gs" target="_blank" class="scary-btn">Z-Library<span>z-lib.io</span></a>
+            <a href="https://worldview.earthdata.nasa.gov" target="_blank" class="scary-btn">Satellite Imageries<span>nasa.gov</span></a>
+            <a href="https://temp-mail.org" target="_blank" class="scary-btn">Temp Mail<span>temp-mail.org</span></a>
+            <a href="https://haveibeenpwned.com" target="_blank" class="scary-btn">Have I Been Pwned<span>pwned.com</span></a>
+            <a href="https://deeppaste.com" target="_blank" class="scary-btn">Deep Paste<span>deeppaste.com</span></a>
+            <a href="https://www.exploit-db.com" target="_blank" class="scary-btn">Exploit Database<span>exploit-db.com</span></a>
+            <a href="https://pimeyes.com" target="_blank" class="scary-btn">PimEyes<span>pimeyes.com</span></a>
+            <a href="https://thehiddenwiki.org" target="_blank" class="scary-btn">Dark Web Links<span>hiddenwiki.org</span></a>
+            <a href="https://www.opensecrets.org" target="_blank" class="scary-btn">Open Secrets<span>opensecrets.org</span></a>
+        </div>
+
+        <!-- 36 ALL AI VIDEO EDITING LAB -->
+        <div class="blood-heading">🎬 36 AI VIDEO EDITING LAB 🎬</div>
+        <div class="scary-grid">
+            <a href="https://www.capcut.com" target="_blank" class="scary-btn">CapCut<span>Smart Tools</span></a>
+            <a href="https://www.adobe.com/products/premiere.html" target="_blank" class="scary-btn">Premiere Pro<span>AI Editing</span></a>
+            <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" class="scary-btn">DaVinci Resolve<span>Color Grade</span></a>
+            <a href="https://vlognow.me" target="_blank" class="scary-btn">VN Video Editor<span>Auto Sync</span></a>
+            <a href="https://www.adobe.com/products/premiere-rush.html" target="_blank" class="scary-btn">Premiere Rush<span>Auto Reframe</span></a>
+            <a href="https://www.jianying.com" target="_blank" class="scary-btn">Jianying (剪映)<span>AI Effects</span></a>
+            <a href="https://filmora.wondershare.com" target="_blank" class="scary-btn">Filmora<span>Smart Cut</span></a>
+            <a href="https://www.cyberlink.com" target="_blank" class="scary-btn">PowerDirector<span>Scene Detect</span></a>
+            <a href="https://invideo.io" target="_blank" class="scary-btn">InVideo AI<span>Text to Video</span></a>
+            <a href="https://www.heygen.com" target="_blank" class="scary-btn">HeyGen<span>AI Avatar</span></a>
+            <a href="https://runwayml.com" target="_blank" class="scary-btn">Runway<span>Green Screen</span></a>
+            <a href="https://pictory.ai" target="_blank" class="scary-btn">Pictory AI<span>Auto Summarize</span></a>
+            <a href="https://lumalabs.ai" target="_blank" class="scary-btn">Luma AI<span>3D Capture</span></a>
+            <a href="https://www.descript.com" target="_blank" class="scary-btn">Descript<span>Voice Clone</span></a>
+            <a href="https://workspace.google.com" target="_blank" class="scary-btn">Google Vids<span>AI Creator</span></a>
+            <a href="https://www.zebracat.ai" target="_btn" class="scary-btn">Zebracat<span>Auto Create</span></a>
+            <a href="https://www.topazlabs.com/topaz-video-ai" target="_blank" class="scary-btn">Topaz Video AI<span>Upscaling</span></a>
+            <a href="https://www.veed.io" target="_blank" class="scary-btn">VEED.IO<span>AI Subtitles</span></a>
+            <a href="https://www.flexclip.com" target="_blank" class="scary-btn">FlexClip<span>Video Maker</span></a>
+            <a href="https://www.synthesia.io" target="_blank" class="scary-btn">Synthesia<span>Avatar Video</span></a>
+            <a href="https://www.steve.ai" target="_blank" class="scary-btn">Steve AI<span>Animation</span></a>
+            <a href="https://www.klap.app" target="_blank" class="scary-btn">Klap<span>Viral Clips</span></a>
+            <a href="https://www.moovly.com" target="_blank" class="scary-btn">Moovly<span>AI Animation</span></a>
+            <a href="https://www.wevideo.com" target="_blank" class="scary-btn">WeVideo<span>Stock Media</span></a>
+            <a href="https://www.wisecut.video" target="_blank" class="scary-btn">Wisecut<span>Auto Cut</span></a>
+            <a href="https://www.flixier.com" target="_blank" class="scary-btn">Flixier<span>Fast Online</span></a>
+            <a href="https://clipchamp.com" target="_blank" class="scary-btn">MS Clipchamp<span>Auto Captions</span></a>
+            <a href="https://www.magisto.com" target="_blank" class="scary-btn">Magisto<span>Slideshow</span></a>
+            <a href="https://www.vizard.ai" target="_blank" class="scary-btn">Vizard<span>Short Clips</span></a>
+            <a href="https://www.apple.com/final-cut-pro" target="_blank" class="scary-btn">Final Cut Pro<span>Smart Conform</span></a>
+            <a href="https://www.hitpaw.com" target="_blank" class="scary-btn">HitPaw Edimakor<span>Watermark Rem</span></a>
+            <a href="https://biteable.com" target="_blank" class="scary-btn">Biteable<span>Templates</span></a>
+            <a href="https://www.pixverse.ai" target="_blank" class="scary-btn">PixVerse<span>Gen From Text</span></a>
+            <a href="https://www.canva.com" target="_blank" class="scary-btn">Canva Video<span>Easy Editor</span></a>
+            <a href="https://kdenlive.org" target="_blank" class="scary-btn">Kdenlive<span>Open Source</span></a>
+            <a href="https://lwks.com" target="_blank" class="scary-btn">Lightworks<span>Pro Editing</span></a>
+        </div>
+
         <!-- 25 REAL TOOLS SECTION -->
-        <div class="section-heading"><i class="fa-solid fa-toolbox"></i> // 25+ REAL DEEP CYBER & OSINT TOOLS KIT</div>
+        <div class="blood-heading">🛠️ 25 REAL DEEP CYBER OSINT KIT 🛠️</div>
         
         <div class="tools-grid">
-            <!-- Tool 1 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-globe"></i> 1. Real IP Geolocation & ISP Finder</div>
                 <input type="text" id="t1" class="tool-input" placeholder="Enter IP (Leave empty for yours)...">
                 <button class="tool-btn" onclick="runTool(1)">Lookup IP Info</button><div id="r1" class="tool-res"></div>
             </div>
-            <!-- Tool 2 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-key"></i> 2. MD5 / SHA-256 Hash Generator</div>
                 <input type="text" id="t2" class="tool-input" placeholder="Enter text to generate hash...">
                 <button class="tool-btn" onclick="runTool(2)">Generate Hashes</button><div id="r2" class="tool-res"></div>
             </div>
-            <!-- Tool 3 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-lock"></i> 3. Secure Random Password Generator</div>
                 <button class="tool-btn" onclick="runTool(3)">Generate 16-Char Key</button><div id="r3" class="tool-res"></div>
             </div>
-            <!-- Tool 4 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-terminal"></i> 4. Termux Root Shell Simulator</div>
-                <div style="background:#000; padding:10px; color:#00ff66; font-size:10px; border-radius:5px; margin-bottom:10px;">root@saju-darknet:~# connected... type 'help'</div>
+                <div style="background:#000; padding:10px; color:#ff0000; font-size:10px; border-radius:5px; margin-bottom:8px; border: 1px solid #ff0000;">root@saju-darknet:~# connected... type 'help'</div>
                 <input type="text" id="term-cmd" class="tool-input" placeholder="pkg update..."><button class="tool-btn" onclick="runTool(25)">Execute</button><div id="r25" class="tool-res"></div>
             </div>
-            <!-- Tool 5 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-code"></i> 5. Base64 Encoder (Real)</div>
                 <input type="text" id="t5" class="tool-input" placeholder="Text to encode"><button class="tool-btn" onclick="runTool(5)">Encode</button><div id="r5" class="tool-res"></div>
             </div>
-            <!-- Tool 6 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-laptop-code"></i> 6. Base64 Decoder (Real)</div>
                 <input type="text" id="t6" class="tool-input" placeholder="Base64 to decode"><button class="tool-btn" onclick="runTool(6)">Decode</button><div id="r6" class="tool-res"></div>
             </div>
-            <!-- Tool 7 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-mobile-screen"></i> 7. Device & Browser OSINT</div>
                 <button class="tool-btn" onclick="runTool(7)">Extract My Info</button><div id="r7" class="tool-res"></div>
             </div>
-            <!-- Tool 8 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-fingerprint"></i> 8. UUID v4 Generator</div>
                 <button class="tool-btn" onclick="runTool(8)">Generate UUID</button><div id="r8" class="tool-res"></div>
             </div>
-            <!-- Tool 9 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-binary"></i> 9. Text to Binary (Real)</div>
                 <input type="text" id="t9" class="tool-input" placeholder="Enter text"><button class="tool-btn" onclick="runTool(9)">Convert</button><div id="r9" class="tool-res"></div>
             </div>
-            <!-- Tool 10 -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-link"></i> 10. URL Encoder</div>
                 <input type="text" id="t10" class="tool-input" placeholder="Enter URL"><button class="tool-btn" onclick="runTool(10)">Encode URL</button><div id="r10" class="tool-res"></div>
             </div>
-            <!-- Additional 15 tools simplified for code length, functionality kept -->
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-qrcode"></i> 11. QR Code Generator</div><input type="text" id="t11" class="tool-input" placeholder="URL"><button class="tool-btn" onclick="runTool(11)">Generate</button><div id="r11" class="tool-res"></div></div>
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-network-wired"></i> 12. Random MAC Address Spoof</div><button class="tool-btn" onclick="runTool(12)">Spoof MAC</button><div id="r12" class="tool-res"></div></div>
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-arrow-right-arrow-left"></i> 13. Text Reverser</div><input type="text" id="t13" class="tool-input" placeholder="Text"><button class="tool-btn" onclick="runTool(13)">Reverse</button><div id="r13" class="tool-res"></div></div>
@@ -303,8 +471,20 @@
             <div class="tool-box"><div class="tool-title"><i class="fa-solid fa-spider"></i> 25. Darknet Data Scraper</div><button class="tool-btn" onclick="runTool(26)">Scrape</button><div id="r26" class="tool-res"></div></div>
         </div>
 
+        <!-- RESTRICTED RELAYS -->
+        <div class="blood-heading">☣️ RESTRICTED RELAYS ☣️</div>
+        <div class="scary-grid">
+            <a href="https://hackermode.io" target="_blank" class="scary-btn">HackerMode</a>
+            <a href="https://privacydevil.com" target="_blank" class="scary-btn">PrivacyDevil</a>
+            <a href="https://bugmenot.com" target="_blank" class="scary-btn">BugMeNot</a>
+            <a href="https://cracked.io" target="_blank" class="scary-btn">Cracked.io</a>
+            <a href="https://remove.bg" target="_blank" class="scary-btn">Remove.bg</a>
+            <a href="https://nukeshare.com" target="_blank" class="scary-btn">NukeShare</a>
+            <a href="https://10minutemail.com" target="_blank" class="scary-btn">10MinMail</a>
+        </div>
+
         <!-- DOWNLOAD FILES SECTION -->
-        <div class="section-heading"><i class="fa-solid fa-folder-open"></i> // APPS & MEDIA PACK</div>
+        <div class="blood-heading">💾 APPS & ROOT PACK 💾</div>
         
         <div class="hub-card">
             <div class="item-meta"><div class="item-icon"><i class="fa-brands fa-android"></i></div><div class="item-desc"><h5>(1).apk</h5><p>Size: 12.18 MB</p></div></div>
@@ -314,9 +494,6 @@
             <div class="item-meta"><div class="item-icon"><i class="fa-solid fa-video"></i></div><div class="item-desc"><h5>Video.MP4</h5><p>Size: 1.07 MB</p></div></div>
             <button onclick="forceDownload('Video.MP4')" class="action-btn"><i class="fa-solid fa-download"></i> Download</button>
         </div>
-
-        <div class="section-heading"><i class="fa-solid fa-microchip"></i> // ROOT & RECOVERY FILES</div>
-        
         <div class="hub-card">
             <div class="item-meta"><div class="item-icon"><i class="fa-solid fa-hard-drive"></i></div><div class="item-desc"><h5>boot.img</h5><p>Size: 7.05 MB</p></div></div>
             <button onclick="forceDownload('boot.img')" class="action-btn"><i class="fa-solid fa-download"></i> Download</button>
@@ -336,18 +513,144 @@
     </div>
 
 <script>
-    setTimeout(() => { document.getElementById('intro-loader').style.display = 'none'; }, 1600);
+    // INTRO ANIMATION LOADER
+    const logs = [
+        "INJECTING MALICIOUS SHELL...",
+        "OVERRIDING SECURITY GATEWAY...",
+        "CORRUPT SYSTEM FILES DETECTED...",
+        "CONNECTING TO DEMONIC MAINFRAME...",
+        "UNLEASHING ROOT EXECUTION...",
+        "SYSTEM CRITICALLY BREACHED!"
+    ];
 
-    document.body.addEventListener('click', () => {
-        const music = document.getElementById('bg-music');
-        if (music.paused) music.play().catch(e => console.log("Audio Play Blocked"));
-    });
+    let progress = 0, logIndex = 0;
+    const fillBar = document.getElementById('loading-bar-fill');
+    const logText = document.getElementById('terminal-log-text');
+    const stageLoading = document.getElementById('stage-loading');
+    const stageJumpscare = document.getElementById('stage-jumpscare');
+    const loader = document.getElementById('intro-loader');
 
-    function verifyPassword() {
-        if (document.getElementById('pass-input').value.trim() === "77642633") {
-            document.getElementById('auth-overlay').style.display = 'none';
+    const loadingInterval = setInterval(() => {
+        progress += 5;
+        fillBar.style.width = progress + '%';
+        if (progress % 15 === 0 && logIndex < logs.length) {
+            logText.innerText = logs[logIndex];
+            logIndex++;
+        }
+        if (progress >= 100) {
+            clearInterval(loadingInterval);
+            triggerJumpscare();
+        }
+    }, 50);
+
+    function triggerJumpscare() {
+        stageLoading.style.display = 'none';
+        stageJumpscare.style.display = 'block';
+        loader.classList.add('blood-flash-bg');
+
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 800);
+        }, 2200);
+    }
+
+    // WEB AUDIO API REAL-TIME FREQUENCY VISUALIZER (DANCE & BEAT LIGHTING)
+    const audio = document.getElementById('bg-music');
+    let audioCtx = null, analyser = null, dataArray = null, source = null;
+    let audioInitialized = false;
+
+    function initAudioContext() {
+        if (audioInitialized) return;
+        try {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioCtx.createAnalyser();
+            analyser.fftSize = 64;
+            source = audioCtx.createMediaElementSource(audio);
+            source.connect(analyser);
+            analyser.connect(audioCtx.destination);
+            dataArray = new Uint8Array(analyser.frequencyBinCount);
+            audioInitialized = true;
+            renderMusicDanceEffects();
+        } catch(e) { console.log("Audio visualizer fallback."); }
+    }
+
+    let globalBeatVolume = 0;
+
+    function renderMusicDanceEffects() {
+        requestAnimationFrame(renderMusicDanceEffects);
+        if (!analyser || audio.paused) return;
+
+        analyser.getByteFrequencyData(dataArray);
+
+        // Extract Low Bass Frequency (Beats)
+        let bassSum = 0;
+        for (let i = 0; i < 6; i++) { bassSum += dataArray[i]; }
+        let bassAvg = bassSum / 6; // 0 - 255
+        let normBass = bassAvg / 255; // 0 - 1
+        globalBeatVolume = normBass;
+
+        const mainContainer = document.getElementById('dance-container');
+        const profileLogo = document.getElementById('dance-logo');
+
+        // 1. DANCE SCALE EFFECT (Beats beat scale)
+        let scaleVal = 1 + (normBass * 0.05); // Dance scale
+        let logoScale = 1 + (normBass * 0.18); // Logo dance jump
+        let shakeX = (Math.random() - 0.5) * (normBass * 8);
+        let shakeY = (Math.random() - 0.5) * (normBass * 8);
+
+        if (mainContainer) {
+            mainContainer.style.transform = `translate(${shakeX}px, ${shakeY}px) scale(${scaleVal})`;
+            let glowGlow = Math.floor(normBass * 120) + 40;
+            mainContainer.style.boxShadow = `0 0 ${glowGlow}px rgba(255, 0, 0, ${0.4 + normBass * 0.6}), inset 0 0 ${glowGlow/2}px rgba(255, 0, 0, 0.6)`;
+        }
+
+        if (profileLogo) {
+            profileLogo.style.transform = `scale(${logoScale}) rotate(${shakeX * 0.5}deg)`;
+            profileLogo.style.boxShadow = `0 0 ${Math.floor(normBass * 80) + 30}px #ff0000`;
+        }
+
+        // 2. BACKGROUND BLOOD LIGHTING STROBE
+        if (normBass > 0.65) {
+            document.body.style.backgroundColor = `rgba(${Math.floor(normBass * 100)}, 0, 0, 1)`;
         } else {
-            alert("ACCESS DENIED! Invalid PIN.");
+            document.body.style.backgroundColor = '#000000';
+        }
+    }
+
+    function toggleAudio() {
+        initAudioContext();
+        if (audioCtx && audioCtx.state === 'suspended') { audioCtx.resume(); }
+        
+        const btnText = document.getElementById('music-btn-text');
+        if (audio.paused) {
+            audio.play();
+            btnText.innerText = "MUSIC & LIGHTING: PLAYING";
+        } else {
+            audio.pause();
+            btnText.innerText = "MUSIC & LIGHTING: PAUSED";
+        }
+    }
+
+    // Auto trigger on initial user click anywhere
+    document.body.addEventListener('click', () => {
+        initAudioContext();
+        if (audioCtx && audioCtx.state === 'suspended') { audioCtx.resume(); }
+        if (audio.paused) { audio.play().catch(e => {}); }
+    }, { once: true });
+
+    // PASSWORD VERIFICATION
+    function verifyPassword() {
+        const pass = document.getElementById('pass-input').value.trim();
+        const panel = document.getElementById('auth-box-panel');
+
+        if (pass === "77642633") {
+            document.getElementById('auth-overlay').style.display = 'none';
+            initAudioContext();
+            if (audio.paused) audio.play().catch(e=>{});
+        } else {
+            panel.classList.add('shake-error');
+            alert("☠️ ACCESS DENIED! DEMONIC SECURITY TRIGGERED!");
+            setTimeout(() => { panel.classList.remove('shake-error'); }, 600);
         }
     }
 
@@ -405,21 +708,33 @@
         } catch(e) { res.innerHTML = "Error processing data."; }
     }
 
-    // Matrix Background Effect
+    // SOUND REACTIVE MATRIX BACKGROUND CANVAS
     const canvas = document.getElementById('matrix-canvas');
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-    const letters = '01764263☠️SAJUISLAM';
+    const letters = '01764263☠️SAJUISLAM🩸🔥';
     const drops = Array(Math.floor(canvas.width / 14)).fill(1);
+
     setInterval(() => {
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = '#00ffcc'; ctx.font = '14px monospace';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.12)'; 
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.font = '14px monospace';
+        
         drops.forEach((y, i) => {
+            // Matrix brightness reactive to audio beat
+            if (globalBeatVolume > 0.5) {
+                ctx.fillStyle = Math.random() > 0.2 ? '#ff0000' : '#ffffff';
+            } else {
+                ctx.fillStyle = Math.random() > 0.3 ? '#ff0000' : '#00ffcc';
+            }
+            
             ctx.fillText(letters.charAt(Math.floor(Math.random() * letters.length)), i * 14, y * 14);
+            
             if (y * 14 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-            drops[i]++;
+            // Drops speed up when bass hits
+            drops[i] += globalBeatVolume > 0.6 ? 2 : 1;
         });
-    }, 50);
+    }, 40);
 </script>
 </body>
 </html>
